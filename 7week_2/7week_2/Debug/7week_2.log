@@ -1,0 +1,5 @@
+﻿  7week_2.cpp
+C:\Users\jkpark\Desktop\자료구조 실습\7week_2\7week_2\7week_2.cpp(27,27): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\jkpark\Desktop\자료구조 실습\7week_2\7week_2\7week_2.cpp(79,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\jkpark\Desktop\자료구조 실습\7week_2\7week_2\7week_2.cpp(87,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  7week_2.vcxproj -> C:\Users\jkpark\Desktop\자료구조 실습\7week_2\Debug\7week_2.exe
