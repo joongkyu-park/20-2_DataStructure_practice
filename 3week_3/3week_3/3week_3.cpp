@@ -1,88 +1,99 @@
-﻿
-#include <iostream>
-
+﻿#include <iostream>
+#include <cstring>
 using namespace std;
 
-// 배열 스택
-class Array_Stack {
-public:
-	int* Stack;
-	int capacity;
-	int t;
+class Q {
+    int* arr;
+    int s = 0;
+    int f = 0;
+    int r = 0;
+    int N;
+    void enqueue(int);
+    void dequeue();
+    void size();
+    bool isEmpty();
+    void front();
+    void rear();
 
-	Array_Stack(int capacity) {
-		this->capacity = capacity;
-		this->Stack = new int[capacity];
-		this->t = -1;
-	}
-
-	int size() {
-		return t + 1;
-	}
-
-	bool empty() {
-		if (t == -1)
-			return 1;
-		else
-			return 0;
-	}
-
-	int top() {
-		if (t == -1)
-			return -1;
-		else {
-			return Stack[t];
-		}
-	}
-
-	void push(int e) {
-		t = t + 1;
-		Stack[t] = e;
-	}
-
-	int pop() {
-		if (t == -1)
-			return -1;
-		else {
-			t = t - 1;
-			return Stack[t + 1];
-		}
-	}
+    Q(int S) {
+        arr = new int[S];
+        N = S;
+    }
 };
+
+void Q::enqueue(int X) {
+    arr[r] = X;
+    r = (r + 1) % N;
+    s++;
+}
+
+void Q::dequeue() {
+    if (isEmpty())
+        cout << "Empty" << endl;
+    else {
+        cout << arr[f] << endl;
+        f = (f + 1) % N;
+        s--;
+    }
+
+}
+
+void Q::size() {
+    cout << s << endl;
+}
+
+bool Q::isEmpty() {
+    if (s == 0)
+        return true;
+    else
+        return false;
+}
+
+void Q::front() {
+    cout << arr[f] << endl;
+}
+
+
+void Q::rear() {
+    cout << arr[r] << endl;
+}
 
 int main()
 {
-	int N;
-	cin >> N;
 
-	while (N > 0) {
-		N--;
-		
-		string equation;
-		cin >> equation;
-		Array_Stack stack(equation.length());
+    int S;
+    cin >> S;
 
-		for (int i = 0; i < equation.length(); i++) {
-			if ((equation[i] - '0') >= 0 && (equation[i] - '0') < 10) {
-				stack.push(equation[i]-'0');
-			}
-			else {
-				int a = stack.pop();
-				int b = stack.pop();
-				if (equation[i] == '+') {
-					stack.push(a + b);
-				}
-				else if (equation[i] == '-') {
-					stack.push(b - a);
-				}
-				else if (equation[i] == '*') {
-					stack.push(a * b);
-				}
-			}
-		}
+    Q q(S);
 
-		cout << stack.top() << endl;
+    int N;
+    cin >> N;
+    while (N--) {
 
-		delete[] stack.Stack;
-	}	
+        string opr;
+        cin >> opr;
+
+        if (opr = "enqueue") {
+            int X;
+            cin >> X;
+            q.enqueue(X);
+        }
+        else if (opr = "dequeue") {
+            q.dequeue();
+        }
+        else if (opr = "size") {
+            q.size();
+        }
+        else if (opr = "isEmpty") {
+            cout << q.isEmpty() << endl;
+        }
+        else if (opr = "front") {
+            q.front();
+        }
+        else if (opr = "rear") {
+            q.rear();
+        }
+
+
+    }
 }
