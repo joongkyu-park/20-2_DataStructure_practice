@@ -1,0 +1,6 @@
+﻿  W14_P2.cpp
+C:\Users\jkpark\Desktop\자료구조 실습\W14_P2\W14_P2\W14_P2.cpp(58,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\jkpark\Desktop\자료구조 실습\W14_P2\W14_P2\W14_P2.cpp(72,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\jkpark\Desktop\자료구조 실습\W14_P2\W14_P2\W14_P2.cpp(100,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\jkpark\Desktop\자료구조 실습\W14_P2\W14_P2\W14_P2.cpp(142,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  W14_P2.vcxproj -> C:\Users\jkpark\Desktop\자료구조 실습\W14_P2\Debug\W14_P2.exe
